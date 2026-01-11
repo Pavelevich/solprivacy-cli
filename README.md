@@ -1,7 +1,7 @@
 # SolPrivacy CLI
 
 <p align="center">
- ![Screenshot 2026-01-11 at 17 52 55](https://github.com/user-attachments/assets/9ab8b204-46f4-4799-bd63-5b009a9e2eeb)
+  <img src="https://github.com/user-attachments/assets/9ab8b204-46f4-4799-bd63-5b009a9e2eeb" alt="SolPrivacy CLI" width="700" />
 </p>
 
 <p align="center">
