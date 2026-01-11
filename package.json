@@ -1,12 +1,17 @@
 {
   "name": "solprivacy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool for Solana wallet privacy analysis - Powered by TETSUO",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
     "solprivacy": "dist/cli.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc && chmod +x dist/cli.js",
     "dev": "tsc --watch",
