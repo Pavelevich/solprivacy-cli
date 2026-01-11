@@ -1,7 +1,7 @@
 # SolPrivacy CLI
 
 <p align="center">
-  <img src="https://solprivacy.xyz/tetsuo-logo.png" alt="SolPrivacy" width="120" />
+ ![Screenshot 2026-01-11 at 17 52 55](https://github.com/user-attachments/assets/9ab8b204-46f4-4799-bd63-5b009a9e2eeb)
 </p>
 
 <p align="center">
