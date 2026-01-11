@@ -10,58 +10,63 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/solprivacy"><img src="https://img.shields.io/npm/v/solprivacy.svg" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/solprivacy"><img src="https://img.shields.io/npm/dm/solprivacy.svg" alt="npm downloads"></a>
-  <a href="https://github.com/Pavelevich/solprivacy-cli/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/solprivacy.svg" alt="license"></a>
-  <a href="https://solprivacy.xyz"><img src="https://img.shields.io/badge/web-solprivacy.xyz-9945FF" alt="website"></a>
+  <a href="https://www.npmjs.com/package/solprivacy"><img src="https://img.shields.io/npm/v/solprivacy.svg?style=for-the-badge&color=9945FF" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/solprivacy"><img src="https://img.shields.io/npm/dm/solprivacy.svg?style=for-the-badge&color=14F195" alt="npm downloads"></a>
+  <a href="https://github.com/Pavelevich/solprivacy-cli/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/solprivacy.svg?style=for-the-badge" alt="license"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/solprivacy"><strong>📦 View on NPM</strong></a> •
+  <a href="https://solprivacy.xyz"><strong>🌐 Web App</strong></a> •
+  <a href="https://github.com/Pavelevich/shadow-tracker"><strong>🔧 API Source</strong></a>
 </p>
 
 ---
 
-## Overview
-
-SolPrivacy is a command-line tool for analyzing the privacy level of Solana wallets. It provides comprehensive privacy metrics, attack detection, and actionable recommendations to improve your on-chain privacy.
-
-### Features
-
-- **Advanced Privacy Score** - Get a 0-100 privacy score with grade (A+ to F)
-- **Shannon Entropy Analysis** - Measure transaction pattern randomness
-- **Differential Privacy Metrics** - Calculate epsilon values for privacy quantification
-- **k-Anonymity Assessment** - Evaluate wallet anonymity within the network
-- **Dust Attack Detection** - Identify and analyze dust attack attempts
-- **Exchange Fingerprinting** - Detect KYC exposure from exchange interactions
-- **Cross-Chain Linkability** - Find bridge usage that could link identities
-- **Mixer Detection** - Analyze potential mixer/tumbler usage
-- **Network Centrality** - Measure wallet visibility in transaction graph
-
-## Installation
+## Install
 
 ```bash
 npm install -g solprivacy
 ```
 
-## Usage
-
-Start the interactive CLI:
+Then just run:
 
 ```bash
 solprivacy
 ```
 
-### Commands
+---
 
-| Command | Description |
-|---------|-------------|
-| `/analyze` | Full privacy analysis of a wallet |
-| `/quick` | Quick privacy score check |
-| `/compare` | Compare privacy of two wallets |
-| `/history` | View your analysis history |
-| `/examples` | Show example wallets for testing |
-| `/help` | Display available commands |
-| `/clear` | Clear the terminal |
-| `/exit` | Exit the CLI |
+## What it does
 
-### Example
+Check how private your Solana wallet actually is. Get a score, see if you're being dusted, find out your exchange exposure.
+
+```
+███████╗ ██████╗ ██╗     ██████╗ ██████╗ ██╗██╗   ██╗ █████╗  ██████╗██╗   ██╗
+██╔════╝██╔═══██╗██║     ██╔══██╗██╔══██╗██║██║   ██║██╔══██╗██╔════╝╚██╗ ██╔╝
+███████╗██║   ██║██║     ██████╔╝██████╔╝██║██║   ██║███████║██║      ╚████╔╝
+╚════██║██║   ██║██║     ██╔═══╝ ██╔══██╗██║╚██╗ ██╔╝██╔══██║██║       ╚██╔╝
+███████║╚██████╔╝███████╗██║     ██║  ██║██║ ╚████╔╝ ██║  ██║╚██████╗   ██║
+╚══════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝  ╚═╝  ╚═╝ ╚═════╝   ╚═╝
+```
+
+---
+
+## Commands
+
+| Command | What it does |
+|---------|--------------|
+| `/analyze` | Full privacy breakdown |
+| `/quick` | Just the score |
+| `/compare` | Compare two wallets |
+| `/history` | Your past scans |
+| `/examples` | Test wallets to try |
+| `/help` | Show commands |
+| `/exit` | Quit |
+
+---
+
+## Example
 
 ```
 solprivacy> /analyze
@@ -73,8 +78,6 @@ solprivacy> /analyze
 ══════════════════════════════════════════════════════════════════════
                     PRIVACY ANALYSIS REPORT
 ══════════════════════════════════════════════════════════════════════
-
-  Wallet: vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg
 
 ┌─────────────────────────────────────────────────────────────────────┐
 │                         PRIVACY SCORE                               │
@@ -90,52 +93,65 @@ solprivacy> /analyze
   Differential Privacy (ε)     2.15
   k-Anonymity                  67
   Clustering Vulnerability     28.5%
-  ...
+
+  ATTACK DETECTION
+  ──────────────────────────────────────────────────────────────────
+  ✓ No dust attack activity detected
+  ✓ No cross-chain linkability detected
+
+  EXCHANGE EXPOSURE
+  ──────────────────────────────────────────────────────────────────
+  KYC Exposure:       8.2%
+  Traceability Risk:  LOW
 ```
 
-## Privacy Metrics Explained
+---
 
-| Metric | Good Value | Description |
-|--------|------------|-------------|
-| Shannon Entropy | > 0.6 | Higher = more random transaction patterns |
-| Mutual Information | < 0.3 | Lower = less correlation between transactions |
-| Differential Privacy (ε) | < 3.0 | Lower = better privacy guarantees |
-| k-Anonymity | ≥ 50 | Higher = harder to identify among peers |
-| Clustering Vulnerability | < 30% | Lower = harder to cluster with other addresses |
+## Metrics
 
-## Environment Variables
+| Metric | You want | Why |
+|--------|----------|-----|
+| Shannon Entropy | > 0.6 | More random = harder to track |
+| Mutual Information | < 0.3 | Less correlation between txs |
+| Differential Privacy (ε) | < 3.0 | Lower = better privacy math |
+| k-Anonymity | ≥ 50 | Bigger crowd to hide in |
+| Clustering Vulnerability | < 30% | Harder to group your addresses |
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `SOLPRIVACY_API_URL` | `https://solprivacy.xyz` | API endpoint URL |
+---
 
-## API
+## Config
 
-This CLI uses the SolPrivacy API. For direct API access, visit [solprivacy.xyz](https://solprivacy.xyz).
+| Env Variable | Default | Description |
+|--------------|---------|-------------|
+| `SOLPRIVACY_API_URL` | `https://solprivacy.xyz` | API endpoint |
 
-### Rate Limits
+---
 
-- General requests: 100 per 15 minutes
-- Analysis requests: 10 per 5 minutes
+## Part of Shadow Tracker
+
+This CLI is the terminal interface for [Shadow Tracker](https://github.com/Pavelevich/shadow-tracker), a privacy analysis engine built on Helius API with 11 metrics based on 10 academic papers.
+
+---
 
 ## Links
 
-- **Website**: [solprivacy.xyz](https://solprivacy.xyz)
-- **GitHub**: [github.com/Pavelevich/solprivacy-cli](https://github.com/Pavelevich/solprivacy-cli)
-- **Shadow Tracker API**: [github.com/Pavelevich/shadow-tracker](https://github.com/Pavelevich/shadow-tracker)
-- **TETSUO on Dexscreener**: [dexscreener.com/solana/tetsuo](https://dexscreener.com/solana/69kdRLyP5DTRkpHraaSZAQbWmAwzF9guKjZfzMXzcbAs)
+- **NPM**: [npmjs.com/package/solprivacy](https://www.npmjs.com/package/solprivacy)
+- **Web**: [solprivacy.xyz](https://solprivacy.xyz)
+- **API**: [github.com/Pavelevich/shadow-tracker](https://github.com/Pavelevich/shadow-tracker)
+- **TETSUO**: [dexscreener.com/solana/tetsuo](https://dexscreener.com/solana/69kdRLyP5DTRkpHraaSZAQbWmAwzF9guKjZfzMXzcbAs)
+
+---
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT
 
 ---
 
 <p align="center">
-  <strong>Built with Solana colors</strong><br>
-  <span style="color: #9945FF">Purple #9945FF</span> • <span style="color: #14F195">Cyan #14F195</span>
+  <sub>Built with Solana colors: <strong>#9945FF</strong> • <strong>#14F195</strong></sub>
 </p>
 
 <p align="center">
-  <a href="https://solprivacy.xyz">solprivacy.xyz</a> • Powered by TETSUO
+  <a href="https://solprivacy.xyz">solprivacy.xyz</a> • Powered by TETSUO 🤖
 </p>
