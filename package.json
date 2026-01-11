@@ -1,0 +1,49 @@
+{
+  "name": "solprivacy",
+  "version": "1.0.0",
+  "description": "CLI tool for Solana wallet privacy analysis - Powered by TETSUO",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "solprivacy": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "solana",
+    "privacy",
+    "wallet",
+    "blockchain",
+    "analysis",
+    "security",
+    "tetsuo",
+    "cli"
+  ],
+  "author": "Pavelevich",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pavelevich/solprivacy-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pavelevich/solprivacy-cli/issues"
+  },
+  "homepage": "https://solprivacy.xyz",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
