@@ -1,7 +1,7 @@
 {
   "name": "solprivacy",
-  "version": "1.0.1",
-  "description": "CLI tool for Solana wallet privacy analysis - Powered by TETSUO",
+  "version": "1.1.1",
+  "description": "The most comprehensive privacy analysis tool for Solana wallets. AI-powered privacy scoring, attack simulations, and actionable recommendations.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -26,8 +26,17 @@
     "blockchain",
     "analysis",
     "security",
+    "ai",
+    "agent",
+    "helius",
+    "entropy",
+    "kyc",
+    "dust-attack",
+    "deanonymization",
     "tetsuo",
-    "cli"
+    "cli",
+    "crypto",
+    "web3"
   ],
   "author": "Pavelevich",
   "license": "MIT",
