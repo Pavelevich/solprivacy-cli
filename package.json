@@ -1,0 +1,63 @@
+{
+  "name": "solprivacy",
+  "version": "1.0.1",
+  "description": "CLI tool for Solana wallet privacy analysis - Powered by TETSUO",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "solprivacy": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "solana",
+    "privacy",
+    "wallet",
+    "blockchain",
+    "analysis",
+    "security",
+    "tetsuo",
+    "cli"
+  ],
+  "author": "Pavelevich",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pavelevich/solprivacy-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pavelevich/solprivacy-cli/issues"
+  },
+  "homepage": "https://solprivacy.xyz",
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.11",
+    "@ai-sdk/groq": "^3.0.4",
+    "@ai-sdk/openai": "^3.0.8",
+    "@ai-sdk/xai": "^3.0.18",
+    "@inquirer/prompts": "^8.2.0",
+    "ai": "^6.0.29",
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "figures": "^6.1.0",
+    "inquirer-autocomplete-standalone": "^0.8.1",
+    "ora": "^5.4.1",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
