@@ -1,6 +1,6 @@
 {
   "name": "solprivacy",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "The most comprehensive privacy analysis tool for Solana wallets. AI-powered privacy scoring, attack simulations, and actionable recommendations.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -36,7 +36,10 @@
     "tetsuo",
     "cli",
     "crypto",
-    "web3"
+    "web3",
+    "ai-agent",
+    "react-agent",
+    "llm"
   ],
   "author": "Pavelevich",
   "license": "MIT",
