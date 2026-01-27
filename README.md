@@ -1,14 +1,26 @@
-# SolPrivacy
+<div align="center">
 
-[![npm version](https://img.shields.io/npm/v/solprivacy.svg?style=flat-square&color=14F195)](https://www.npmjs.com/package/solprivacy)
-[![npm downloads](https://img.shields.io/npm/dm/solprivacy.svg?style=flat-square&color=9945FF)](https://www.npmjs.com/package/solprivacy)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+# SolPrivacy CLI
 
-**The most comprehensive privacy analysis tool for Solana wallets.**
+[![npm version](https://img.shields.io/npm/v/solprivacy.svg?style=for-the-badge&color=14F195&logo=npm&logoColor=white)](https://www.npmjs.com/package/solprivacy)
+[![npm downloads](https://img.shields.io/npm/dm/solprivacy.svg?style=for-the-badge&color=9945FF&logo=npm&logoColor=white)](https://www.npmjs.com/package/solprivacy)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 
-Analyze, protect, and improve your on-chain privacy with AI-powered recommendations.
+**AI-Powered Privacy Analysis for Solana Wallets**
 
-🌐 [solprivacy.xyz](https://solprivacy.xyz) • 📦 [npm](https://www.npmjs.com/package/solprivacy) • 💻 [GitHub](https://github.com/Pavelevich/solprivacy-cli)
+*Analyze, protect, and improve your on-chain privacy with intelligent recommendations*
+
+[Website](https://solprivacy.xyz) | [NPM Package](https://www.npmjs.com/package/solprivacy) | [Documentation](#features) | [Report Bug](https://github.com/Pavelevich/solprivacy-cli/issues)
+
+</div>
+
+---
+
+> **Part of the Shadow Tracker Suite**
+>
+> This CLI is the command-line interface for [**Shadow Tracker**](https://github.com/Pavelevich/shadow-tracker) — a state-of-the-art privacy analyzer for Solana featuring 11 metrics, backed by 10 academic papers, with ~80% attack vector coverage.
 
 ---
 
@@ -33,44 +45,65 @@ solprivacy
 
 ---
 
-## Why SolPrivacy?
+## The Problem
 
-Your Solana wallet activity is **public by default**. Every transaction can be:
+Your Solana wallet activity is **public by default**. Every transaction reveals:
 
-- 🔍 **Traced** - Identity linked via exchange records
-- 📊 **Clustered** - All your wallets linked together
-- 🎯 **Targeted** - Dust attacks track your movements
-- ⏰ **Analyzed** - Timezone and habits revealed
+| Threat | Risk Level | Description |
+|--------|------------|-------------|
+| **Identity Tracing** | `CRITICAL` | CEX records link your address to real identity |
+| **Wallet Clustering** | `HIGH` | Graph analysis connects all your wallets |
+| **Dust Attacks** | `HIGH` | Micro-transactions track your movements |
+| **Temporal Analysis** | `MEDIUM` | Transaction timing reveals timezone & habits |
 
 ---
 
 ## Features
 
-### 🔬 Privacy Analysis
-- **Privacy Score** (0-100) with letter grade
-- **Entropy Analysis** - Transaction randomness measurement
-- **K-Anonymity** - Size of your anonymity set
-- **Cluster Detection** - Find linked addresses
-- **Dust Attack Detection** - Identify tracking attempts
-- **KYC Exposure** - Exchange linkage risk assessment
+<table>
+<tr>
+<td width="50%">
 
-### 🤖 AI Agent
-- **Multi-provider**: OpenAI, Claude, xAI Grok, Groq, Ollama
-- **ReAct Architecture** - Intelligent reasoning loop
-- **8 Specialized Tools** - Comprehensive analysis
-- **Conversation Memory** - Context-aware follow-ups
+### Privacy Analysis
+- Privacy Score (0-100) with letter grade
+- Entropy Analysis - Transaction randomness
+- K-Anonymity - Anonymity set size
+- Cluster Detection - Find linked addresses
+- Dust Attack Detection - Identify tracking
+- KYC Exposure - Exchange linkage risk
 
-### 🛡️ Attack Simulations
+</td>
+<td width="50%">
+
+### AI Agent (v2.0)
+- **Multi-provider**: OpenAI, Claude, xAI, Groq, Ollama
+- **ReAct Architecture** - Intelligent reasoning
+- **8 Specialized Tools** - Deep analysis
+- **Memory** - Context-aware conversations
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### Attack Simulations
 - Dust Attack simulation
 - Cluster Analysis simulation
 - Temporal Analysis simulation
 - Exchange Correlation simulation
 
-### 📈 Actionable Insights
+</td>
+<td width="50%">
+
+### Actionable Insights
 - Prioritized recommendations
 - Direct links to privacy tools
-- Score projections after improvements
-- Historical tracking
+- Score projections after fixes
+- Historical tracking & trends
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -164,20 +197,34 @@ export GROQ_API_KEY=your_key        # For Groq
 
 ## Tech Stack
 
-- Node.js 16+
-- TypeScript
-- Vercel AI SDK
-- Helius API
-- Chalk, Inquirer, Ora
+| Component | Technology |
+|-----------|------------|
+| Runtime | Node.js 16+ |
+| Language | TypeScript 5.0 |
+| AI Framework | Vercel AI SDK |
+| Blockchain Data | Helius API |
+| CLI Framework | Inquirer, Chalk, Ora |
 
 ---
 
-## Links
+## Related Projects
 
-- 🌐 Website: [solprivacy.xyz](https://solprivacy.xyz)
-- 📦 npm: [npmjs.com/package/solprivacy](https://www.npmjs.com/package/solprivacy)
-- 💻 GitHub: [github.com/Pavelevich/solprivacy-cli](https://github.com/Pavelevich/solprivacy-cli)
-- 🔑 Helius API: [helius.dev](https://helius.dev)
+| Project | Description |
+|---------|-------------|
+| [**Shadow Tracker**](https://github.com/Pavelevich/shadow-tracker) | Core privacy analysis engine |
+| [**solprivacy.xyz**](https://solprivacy.xyz) | Web interface |
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
@@ -187,4 +234,14 @@ MIT © [Pavelevich](https://github.com/Pavelevich)
 
 ---
 
-**Powered by [TETSUO](https://tetsuo.xyz)** • Built for the [Solana Privacy Hackathon](https://encrypt.trade)
+<div align="center">
+
+**Powered by [TETSUO](https://tetsuo.xyz)**
+
+Built for the [Solana Privacy Hackathon](https://encrypt.trade)
+
+---
+
+[Website](https://solprivacy.xyz) · [NPM](https://www.npmjs.com/package/solprivacy) · [GitHub](https://github.com/Pavelevich/solprivacy-cli) · [Helius API](https://helius.dev)
+
+</div>
